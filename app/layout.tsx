@@ -1,0 +1,44 @@
+import type { Metadata } from "next";
+import { Inter, Geist_Mono } from "next/font/google";
+import "./globals.css";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "Superb Editing - Expert Editing for Academic Excellence",
+  description:
+    "Professional editing and proofreading services for students, academics, and businesses. Enhance your writing with our expert team.",
+};
+
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import { SessionProvider } from "@/components/providers/SessionProvider";
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${inter.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full">
+        <SessionProvider>
+          <Navbar />
+          <main className="pt-[136px]">{children}</main>
+          <Footer />
+        </SessionProvider>
+      </body>
+    </html>
+  );
+}
