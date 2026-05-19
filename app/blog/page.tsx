@@ -104,7 +104,7 @@ export default function BlogPage() {
                 <p className="text-blue-100 text-sm mb-6 leading-relaxed">
                   Get the latest insights on academic writing and exclusive offers delivered straight to your inbox.
                 </p>
-                <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                <form className="space-y-4">
                   <div>
                     <input 
                       type="email" 
@@ -114,7 +114,7 @@ export default function BlogPage() {
                     />
                   </div>
                   <button 
-                    type="submit" 
+                    type="button" 
                     className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-4 rounded-xl transition-colors flex items-center justify-center space-x-2"
                   >
                     <span>Subscribe</span>
