@@ -36,7 +36,8 @@ const MainNav = () => {
             onMouseEnter={() => link.hasMegaMenu && setActiveMenu(link.label)}
             onMouseLeave={() => setActiveMenu(null)}
           >
-            <button
+            <Link
+              href={link.href}
               className={`flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors hover:text-[#BE1E2D] ${
                 activeMenu === link.label ? "text-[#BE1E2D]" : "text-[#05203C]"
               }`}
@@ -48,7 +49,7 @@ const MainNav = () => {
                 </span>
               )}
               {link.hasMegaMenu && <ChevronDown size={14} className={`transition-transform ${activeMenu === link.label ? 'rotate-180' : ''}`} />}
-            </button>
+            </Link>
 
             {/* Mega Menu / Sub Menu Dropdown */}
             <AnimatePresence>

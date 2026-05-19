@@ -9,58 +9,64 @@ export const TOP_NAV_LINKS = [
 
 export const MAIN_NAV_LINKS = [
   {
-    label: "Services",
-    href: "#",
+    label: "Editing Services",
+    href: "/services",
     hasMegaMenu: true,
     subLinks: [
-      { label: "Academic Editing", href: "/services/academic-editing" },
-      { label: "Research Writing", href: "/services/research-writing" },
-      { label: "Manuscript Proofreading", href: "/services/proofreading" },
-      { label: "Formatting & Citations", href: "/services/formatting" },
-    ],
+      { label: "Standard Editing", href: "/services" },
+      { label: "Express Editing", href: "/services" },
+      { label: "Premium Plus", href: "/services" },
+    ]
   },
   {
-    label: "Resources",
-    href: "#",
+    label: "Courses",
+    href: "/courses",
     hasMegaMenu: true,
     subLinks: [
-      { label: "Writing Guidelines", href: "/resources/writing-guidelines" },
-      { label: "Submission Deadlines", href: "/resources/deadlines" },
-      { label: "Research Books", href: "/resources/books" },
-    ],
+      { label: "Research Proposal", href: "/courses" },
+      { label: "Literature Review", href: "/courses" },
+    ]
   },
   {
-    label: "Workshops",
-    href: "#",
+    label: "Premium Tools",
+    href: "/tools",
     hasMegaMenu: true,
+    subLinks: [
+      { label: "Standard Essentials", href: "/tools" },
+      { label: "Comprehensive Suite", href: "/tools" },
+      { label: "Ultimate Toolkit", href: "/tools" },
+    ]
   },
   {
-    label: "Pricing",
-    href: "#",
+    label: "Blog",
+    href: "/blog",
     hasMegaMenu: false,
   },
   {
-    label: "Testimonials",
-    href: "#",
+    label: "Publications/Conferences",
+    href: "/publications",
     hasMegaMenu: true,
-    badge: "NEW",
+    subLinks: [
+      { label: "Recommended Journals", href: "/publications" },
+      { label: "Upcoming Conferences", href: "/publications" },
+    ]
   },
 ];
 
 export const HERO_SLIDES = [
   {
     id: "01",
-    title: "Elevate Your Research with Premium Academic Editing",
+    title: "Polish Your Research Writing with Superb Editing",
     subtitle: "Superb Editing",
-    description: "Transform your manuscript into a publication-ready masterpiece. We specialize in thesis, dissertation, and journal article editing.",
+    description: "Transform your manuscript into a publication-ready masterpiece. We specialize Polish Your Research Writing with Superb Editing.",
     buttonText: "Get a Quote",
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2070&auto=format&fit=crop",
   },
   {
     id: "02",
-    title: "Expert Dissertation & Thesis Writing Support",
+    title: "Access Premium Writing Tools at Affordable Prices",
     subtitle: "Superb Editing",
-    description: "Overcome writing blocks with guidance from PhD-level editors. We help you refine your arguments and structure your research effectively.",
+    description: "Boost your productivity with trusted academic writing and plagiarism-checking tools, including Grammarly, QuillBot, Turnitin, and more — all in one affordable package.",
     buttonText: "Explore Services",
     image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2073&auto=format&fit=crop",
   },
@@ -75,4 +81,4 @@ export const HERO_SLIDES = [
 ];
 
 export const ANNOUNCEMENT_TEXT = "New Semester Special: Get 15% off on all dissertation editing services this month! Use code RESEARCH15";
-export const PHONE_NUMBER = "+234 913 234 0000";
+export const PHONE_NUMBER = "+2349069966566";

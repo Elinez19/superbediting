@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BookOpen, GraduationCap, PenTool, FileCheck, Quote } from "lucide-react";
+import { GraduationCap, PenTool, FileCheck, Quote } from "lucide-react";
 import Link from "next/link";
 
 const CATEGORIES = [
@@ -13,15 +13,15 @@ const CATEGORIES = [
     link: "/services/academic-editing",
   },
   {
-    title: "Research Writing",
-    description: "Get expert assistance in drafting proposals, literature reviews, and methodologies while maintaining academic integrity.",
+    title: "Express Editing Support",
+    description: "Need urgent editing? Our fast-track editing service delivers professional-quality revisions with quick turnaround times without compromising accuracy.",
     icon: <PenTool className="w-8 h-8" />,
     color: "bg-blue-600",
     link: "/services/research-writing",
   },
   {
-    title: "Journal Submission",
-    description: "Increase your acceptance rates with meticulous proofreading and peer-review feedback for high-impact journal articles.",
+    title: "Premium Writing Tools",
+    description: "Access trusted writing and plagiarism-checking tools like Grammarly, QuillBot, and Turnitin at affordable subscription rates.",
     icon: <FileCheck className="w-8 h-8" />,
     color: "bg-indigo-800",
     link: "/services/proofreading",

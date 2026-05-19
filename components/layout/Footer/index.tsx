@@ -21,25 +21,16 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { label: "Thesis Editing", href: "#" },
-      { label: "Dissertation Support", href: "#" },
-      { label: "Journal Submission", href: "#" },
-      { label: "Plagiarism Check", href: "#" },
-      { label: "Data Analysis", href: "#" },
-    ],
-    resources: [
-      { label: "Writing Guidelines", href: "/resources/writing-guidelines" },
-      { label: "Submission Deadlines", href: "/resources/deadlines" },
-      { label: "Research Books", href: "/resources/books" },
-      { label: "Writing Tools", href: "#" },
-      { label: "Research Blog", href: "#" },
+      { label: "Editing Services", href: "/services" },
+      { label: "Premium Tools", href: "/tools" },
+      { label: "Courses", href: "/courses" },
+      { label: "Blog", href: "/blog" },
+      { label: "Publications", href: "/publications" },
     ],
     company: [
-      { label: "About Us", href: "#" },
-      { label: "Success Stories", href: "#" },
-      { label: "Our Editors", href: "#" },
-      { label: "Pricing Plans", href: "#" },
-      { label: "Contact Us", href: "#" },
+      { label: "About Us", href: "/about" },
+      { label: "Mission", href: "/about" },
+      { label: "Contact Us", href: "/contact" },
     ],
   };
 
@@ -110,11 +101,11 @@ const Footer = () => {
 
           <div>
             <h4 className="text-lg font-bold mb-6 relative inline-block">
-              Resources
+              Company
               <span className="absolute -bottom-2 left-0 w-8 h-1 bg-[#0051A1] rounded-full" />
             </h4>
             <ul className="space-y-4">
-              {footerLinks.resources.map((link, idx) => (
+              {footerLinks.company.map((link, idx) => (
                 <li key={idx}>
                   <Link href={link.href} className="text-white/60 hover:text-white hover:translate-x-1 inline-flex items-center gap-2 transition-all group">
                     <ArrowRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all text-[#0051A1]" />
@@ -134,15 +125,18 @@ const Footer = () => {
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3 text-white/60">
                 <MapPin size={20} className="text-[#0051A1] shrink-0" />
-                <span>123 Research Plaza, Victoria Island, Lagos, Nigeria</span>
+                <span>Global Coverage</span>
               </li>
               <li className="flex items-center gap-3 text-white/60">
                 <Phone size={20} className="text-[#0051A1] shrink-0" />
                 <a href={`tel:${PHONE_NUMBER}`} className="hover:text-white transition-colors">{PHONE_NUMBER}</a>
               </li>
-              <li className="flex items-center gap-3 text-white/60">
-                <Mail size={20} className="text-[#0051A1] shrink-0" />
-                <a href="mailto:info@superbediting.com" className="hover:text-white transition-colors">info@superbediting.com</a>
+              <li className="flex items-start gap-3 text-white/60">
+                <Mail size={20} className="text-[#0051A1] shrink-0 mt-1" />
+                <div className="flex flex-col">
+                  <a href="mailto:info@superbediting.com" className="hover:text-white transition-colors">info@superbediting.com</a>
+                  <a href="mailto:contact@superbediting.com" className="hover:text-white transition-colors">contact@superbediting.com</a>
+                </div>
               </li>
             </ul>
 
