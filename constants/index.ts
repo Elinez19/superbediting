@@ -13,9 +13,9 @@ export const MAIN_NAV_LINKS = [
     href: "/services",
     hasMegaMenu: true,
     subLinks: [
-      { label: "Standard Editing", href: "/services" },
-      { label: "Express Editing", href: "/services" },
-      { label: "Premium Plus", href: "/services" },
+      { label: "Standard Editing", href: "/services/standard-editing" },
+      { label: "Express Editing", href: "/services/express-editing" },
+      { label: "Premium Plus", href: "/services/premium-plus" },
     ]
   },
   {
@@ -23,8 +23,8 @@ export const MAIN_NAV_LINKS = [
     href: "/courses",
     hasMegaMenu: true,
     subLinks: [
-      { label: "Research Proposal", href: "/courses" },
-      { label: "Literature Review", href: "/courses" },
+      { label: "Research Proposal", href: "/courses/research-proposal" },
+      { label: "Literature Review", href: "/courses/literature-review" },
     ]
   },
   {
@@ -32,9 +32,9 @@ export const MAIN_NAV_LINKS = [
     href: "/tools",
     hasMegaMenu: true,
     subLinks: [
-      { label: "Standard Essentials", href: "/tools" },
-      { label: "Comprehensive Suite", href: "/tools" },
-      { label: "Ultimate Toolkit", href: "/tools" },
+      { label: "Standard Essentials", href: "/tools/standard-essentials" },
+      { label: "Comprehensive Suite", href: "/tools/comprehensive-suite" },
+      { label: "Ultimate Toolkit", href: "/tools/ultimate-toolkit" },
     ]
   },
   {
@@ -47,8 +47,8 @@ export const MAIN_NAV_LINKS = [
     href: "/publications",
     hasMegaMenu: true,
     subLinks: [
-      { label: "Recommended Journals", href: "/publications" },
-      { label: "Upcoming Conferences", href: "/publications" },
+      { label: "Recommended Journals", href: "/publications/recommended-journals" },
+      { label: "Upcoming Conferences", href: "/publications/upcoming-conferences" },
     ]
   },
 ];

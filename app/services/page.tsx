@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Top-tier language editing services designed to refine your writing and increase your chances of publication.",
 };
 
-const PACKAGES = [
+export const PACKAGES = [
   {
     name: "Standard Editing",
     description: "Perfect Your Manuscript/thesis for Submission",

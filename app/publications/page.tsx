@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Discover suitable journals, research opportunities, and upcoming academic conferences.",
 };
 
-const JOURNALS = [
+export const JOURNALS = [
   {
     title: "Journal of Advanced Research",
     impactFactor: "10.47",
@@ -28,7 +28,7 @@ const JOURNALS = [
   }
 ];
 
-const CONFERENCES = [
+export const CONFERENCES = [
   {
     title: "Annual Global Researchers Symposium",
     date: "October 12-14, 2026",

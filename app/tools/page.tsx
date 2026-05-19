@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Access top-tier writing tools like Grammarly, QuillBot, and Turnitin at affordable prices through our corporate access.",
 };
 
-const TOOL_PACKAGES = [
+export const TOOL_PACKAGES = [
   {
     name: "Standard Writing Essentials",
     color: "bg-white",

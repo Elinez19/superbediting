@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Enhance your academic writing skills with our specialized courses in Research Proposal Writing, Literature Review Strategies, and more.",
 };
 
-const COURSES = [
+export const COURSES = [
   {
     id: 1,
     title: "Mastering Research Proposal Writing",
