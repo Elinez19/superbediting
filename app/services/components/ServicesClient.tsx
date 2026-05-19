@@ -320,7 +320,7 @@ export default function ServicesClient() {
       <section className="py-24 px-6 max-w-[1100px] mx-auto w-full">
         <div className="flex flex-col md:flex-row gap-16 items-center">
           <div className="w-full md:w-5/12">
-            <div className="relative w-full aspect-[4/3] overflow-hidden shadow-xl rounded-sm">
+            <div className="relative w-full aspect-4/3 overflow-hidden shadow-xl rounded-sm">
                <Image 
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2069&auto=format&fit=crop" 
                 alt="Professional Editor" 
