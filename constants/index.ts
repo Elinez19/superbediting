@@ -7,7 +7,15 @@ export const TOP_NAV_LINKS = [
   { label: "Client Portal", href: "#" },
 ];
 
-export const MAIN_NAV_LINKS = [
+export interface NavLink {
+  label: string;
+  href: string;
+  hasMegaMenu: boolean;
+  badge?: string;
+  subLinks?: { label: string; href: string; }[];
+}
+
+export const MAIN_NAV_LINKS: NavLink[] = [
   {
     label: "Editing Services",
     href: "/services",
