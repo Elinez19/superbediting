@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Check, X, Award } from "lucide-react";
+import { Check, X, Award, Quote, HelpCircle, FileText, FileCheck } from "lucide-react";
 
 // Types
 type Tab = "Language Editing" | "Translation" | "LaTeX" | "PhD Thesis" | "Group Deals";
@@ -19,18 +19,13 @@ const WORD_COUNTS = [
 ];
 
 const COMPARISON = [
-  { feature: "Follow TLS guidelines referencing to your field of study", standard: true, express: true, premium: true },
-  { feature: "Detailed language check (spelling, grammar, sentence structure and terminology)", standard: true, express: true, premium: true },
-  { feature: "Free re-edit or money back in case of rejection based on language", standard: true, express: true, premium: true },
-  { feature: "High-speed turnaround", standard: false, express: true, premium: true },
-  { feature: "Free re-editing support for 12 months", standard: false, express: false, premium: true },
-  { feature: "Cover letter, report on error & Reviewer comment", standard: false, express: false, premium: true },
-  { feature: "Journal specific formatting as per journal instructions", standard: false, express: false, premium: true },
-  { feature: "Reference check and format", standard: false, express: false, premium: true },
-  { feature: "Plagiarism check for your writing sample check under turnitin", standard: false, express: false, premium: true },
-  { feature: "Cover letter customized for your final submission", standard: false, express: false, premium: true },
-  { feature: "Assessment report with feedback on paper language and structure", standard: false, express: false, premium: true },
-  { feature: "Word count reduction of up to 20%", standard: false, express: false, premium: true },
+  { feature: "Correct English Language", standard: true, express: true, premium: true },
+  { feature: "High-Speed Turnaround", standard: false, express: true, premium: true },
+  { feature: "Improved Writing Flow", standard: false, express: false, premium: true },
+  { feature: "Unlimited Revisions", standard: false, express: false, premium: true },
+  { feature: "Expert Editing for Research Papers", standard: true, express: true, premium: true },
+  { feature: "Customized Editing Based on Needs", standard: true, express: true, premium: true },
+  { feature: "12-Month Support Validity", standard: false, express: false, premium: true },
 ];
 
 export default function ServicesClient() {
@@ -53,7 +48,6 @@ export default function ServicesClient() {
     <div className="flex flex-col min-h-screen bg-white font-sans text-gray-800">
       {/* Hero Section */}
       <section className="relative w-full h-[350px] md:h-[450px]">
-        {/* Background Image Placeholder */}
         <div className="absolute inset-0 w-full h-full">
            <Image 
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" 
@@ -65,56 +59,69 @@ export default function ServicesClient() {
         </div>
         
         {/* White Text Box */}
-        <div className="absolute bottom-[-60px] left-1/2 transform -translate-x-1/2 w-[90%] max-w-[1000px] bg-white p-6 md:p-10 shadow-lg rounded-sm z-10">
-          <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
-            Why SuperbEditing Language Editing services?
+        <div className="absolute bottom-[-60px] left-1/2 transform -translate-x-1/2 w-[90%] max-w-[1000px] bg-white p-6 md:p-10 shadow-lg rounded-sm z-10 border-t-4 border-red-600">
+          <h1 className="text-2xl md:text-4xl font-bold text-[#05203C] mb-4">
+            Why Choose SuperbEditing for Your Manuscript/thesis?
           </h1>
+          <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-4">
+            Getting your manuscript accepted by a reputable journal is a significant milestone in your academic journey, but the road to publication can be challenging. The clarity and precision of your writing are crucial in effectively communicating your research findings. At SuperbEditing.com, our seasoned editors possess deep research and academic editing expertise. We&apos;re committed to helping you enhance your manuscript and increase your chances of publication.
+          </p>
           <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-            Getting your manuscript accepted by a top journal is challenging. The quality of your writing is important to effectively convey your research. Our Editors have extensive background and expertise in your field of study, and will help you increase your chances of being published.
+            With years of experience supporting academics and researchers, Superb Editing offers top-tier language editing services designed to refine your writing. Customize our service to meet your needs by selecting the appropriate package and turnaround time.
+          </p>
+          <p className="text-red-600 font-bold mt-4 text-center">
+            Get your manuscript/thesis edited with our affordable packages.
           </p>
         </div>
       </section>
 
       {/* Tabs Section */}
-      <section className="pt-28 pb-8 px-4 max-w-[1200px] mx-auto w-full">
-        <div className="flex flex-wrap justify-center border-b border-gray-200 mb-6">
+      <section className="pt-32 pb-8 px-4 max-w-[1200px] mx-auto w-full">
+        <div className="flex flex-wrap justify-center border-b border-gray-200 mb-10">
           {TABS.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
               className={`px-6 py-4 text-sm font-medium transition-colors border-b-2 ${
                 activeTab === tab 
-                  ? "border-[#007398] text-[#007398]" 
-                  : "border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-300"
+                  ? "border-[#05203C] text-[#05203C]" 
+                  : "border-transparent text-gray-500 hover:text-[#05203C] hover:border-gray-300"
               }`}
             >
               {tab}
             </button>
           ))}
         </div>
-        
-        <p className="text-center text-sm text-gray-600 max-w-[900px] mx-auto mb-10">
-          Choose from 3 Editing plans. 12-month Support valid for 12 months. Choose from high-standard language editing services from our expert academic editors. Tailor the service to your specific needs by specifying the desired level of service and delivery time.
-        </p>
 
         {activeTab === "Language Editing" && (
-          <div className="space-y-12">
+          <div className="space-y-16">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-[#05203C] mb-4">Our Packages & Options</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Choose the package that best fits your needs and let Superb Editors help you confidently achieve your publication and academic goals.
+              </p>
+            </div>
+
             {/* Packages Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-stretch mt-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-stretch mt-8">
               
               {/* Standard */}
-              <div className="flex flex-col relative px-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Standard</h3>
-                <p className="text-gray-600 text-sm mb-4 h-12">
-                  Ensure that your work is written in correct English before submission.
+              <div className="flex flex-col relative px-6 py-8 border border-gray-200 rounded-xl hover:shadow-xl transition-shadow bg-white">
+                <h3 className="text-2xl font-bold text-[#05203C] mb-2">Standard Editing</h3>
+                <p className="text-red-600 font-semibold mb-4 text-sm">Perfect Your Manuscript/thesis for Submission</p>
+                <p className="text-gray-600 text-sm mb-6 h-28 text-left">
+                  Before submitting your manuscript, ensure it is polished and free from language errors. Our Standard Editing package is ideal for researchers looking to refine their work with thorough, professional editing.
                 </p>
-                <div className="h-6 mb-2"></div> {/* Spacer for alignment */}
+                <ul className="text-left text-sm text-gray-700 mb-6 space-y-2 font-medium">
+                  <li><span className="text-[#05203C] font-bold">Turnaround Time:</span> 4-14 business days</li>
+                  <li><span className="text-[#05203C] font-bold">Base Price:</span> Starting at $95 for 500 words</li>
+                </ul>
                 
                 <div className="mt-auto">
                   <div className="flex flex-col items-center mb-6">
-                    <label className="text-xs font-semibold text-gray-500 mb-1">Price calculator</label>
+                    <label className="text-xs font-bold text-gray-500 mb-1 uppercase tracking-wide">Price calculator</label>
                     <select 
-                      className="border border-gray-300 rounded-sm px-3 py-2 text-sm w-48 text-gray-700 bg-white cursor-pointer focus:outline-none focus:ring-1 focus:ring-[#007398]"
+                      className="border-2 border-gray-200 rounded-md px-3 py-2 text-sm w-full text-[#05203C] font-semibold bg-gray-50 cursor-pointer focus:outline-none focus:border-red-600"
                       value={stdWordCount.label}
                       onChange={(e) => setStdWordCount(WORD_COUNTS.find(w => w.label === e.target.value) || WORD_COUNTS[0])}
                     >
@@ -126,33 +133,35 @@ export default function ServicesClient() {
                   </div>
                   
                   <div className="flex justify-center items-end gap-2 mb-6">
-                    <span className="text-xs text-gray-500 mb-1">From</span>
-                    <span className="text-4xl font-bold text-gray-900">${stdPrice}</span>
+                    <span className="text-sm text-gray-500 mb-1 font-medium">From</span>
+                    <span className="text-4xl font-extrabold text-[#05203C]">${stdPrice}</span>
                   </div>
 
                   <Link href="/services/standard-editing">
-                    <button className="bg-[#007398] hover:bg-[#005a77] text-white font-medium py-3 px-6 rounded-sm w-4/5 mx-auto transition-colors text-sm flex items-center justify-center gap-2">
-                      Order Standard service <span className="text-xs">▶</span>
+                    <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-md w-full transition-colors text-sm flex items-center justify-center gap-2">
+                      Order Standard <span className="text-xs">▶</span>
                     </button>
                   </Link>
                 </div>
               </div>
 
               {/* Express */}
-              <div className="flex flex-col relative px-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Express</h3>
-                <p className="text-gray-600 text-sm mb-4 h-12">
-                  Get the same quality as Standard, but faster!
+              <div className="flex flex-col relative px-6 py-8 border border-gray-200 rounded-xl hover:shadow-xl transition-shadow bg-white">
+                <h3 className="text-2xl font-bold text-[#05203C] mb-2">Express Editing</h3>
+                <p className="text-red-600 font-semibold mb-4 text-sm">Fast-Track Your Manuscript</p>
+                <p className="text-gray-600 text-sm mb-6 h-28 text-left">
+                  Need your manuscript edited quickly? Our Express Editing service offers the same high-quality editing as our Standard package but with a much faster turnaround, ensuring your work is ready when needed.
                 </p>
-                <div className="flex items-center justify-center gap-1 text-green-600 text-xs font-semibold mb-2 h-6">
-                  <Check className="w-4 h-4 bg-green-100 rounded-full text-green-600 p-0.5" /> High-speed turnaround
-                </div>
+                <ul className="text-left text-sm text-gray-700 mb-6 space-y-2 font-medium">
+                  <li><span className="text-[#05203C] font-bold">Turnaround Time:</span> 1-4 business days</li>
+                  <li><span className="text-[#05203C] font-bold">Base Price:</span> Starting at $170 for 500 words</li>
+                </ul>
                 
                 <div className="mt-auto">
                   <div className="flex flex-col items-center mb-6">
-                    <label className="text-xs font-semibold text-gray-500 mb-1">Price calculator</label>
+                    <label className="text-xs font-bold text-gray-500 mb-1 uppercase tracking-wide">Price calculator</label>
                     <select 
-                      className="border border-gray-300 rounded-sm px-3 py-2 text-sm w-48 text-gray-700 bg-white cursor-pointer focus:outline-none focus:ring-1 focus:ring-[#007398]"
+                      className="border-2 border-gray-200 rounded-md px-3 py-2 text-sm w-full text-[#05203C] font-semibold bg-gray-50 cursor-pointer focus:outline-none focus:border-red-600"
                       value={expWordCount.label}
                       onChange={(e) => setExpWordCount(WORD_COUNTS.find(w => w.label === e.target.value) || WORD_COUNTS[0])}
                     >
@@ -164,36 +173,38 @@ export default function ServicesClient() {
                   </div>
                   
                   <div className="flex justify-center items-end gap-2 mb-6">
-                    <span className="text-xs text-gray-500 mb-1">From</span>
-                    <span className="text-4xl font-bold text-gray-900">${expPrice}</span>
+                    <span className="text-sm text-gray-500 mb-1 font-medium">From</span>
+                    <span className="text-4xl font-extrabold text-[#05203C]">${expPrice}</span>
                   </div>
 
                   <Link href="/services/express-editing">
-                    <button className="bg-[#007398] hover:bg-[#005a77] text-white font-medium py-3 px-6 rounded-sm w-4/5 mx-auto transition-colors text-sm flex items-center justify-center gap-2">
-                      Order Express service <span className="text-xs">▶</span>
+                    <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-md w-full transition-colors text-sm flex items-center justify-center gap-2">
+                      Order Express <span className="text-xs">▶</span>
                     </button>
                   </Link>
                 </div>
               </div>
 
-              {/* Plus */}
-              <div className="flex flex-col relative px-4">
-                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-green-100 text-green-800 text-[10px] font-bold px-2 py-0.5 rounded-sm uppercase tracking-wide border border-green-200">
+              {/* Premium Plus */}
+              <div className="flex flex-col relative px-6 py-8 border-2 border-[#05203C] rounded-xl hover:shadow-2xl transition-shadow bg-blue-50/30">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-red-600 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wide shadow-md whitespace-nowrap">
                   RECOMMENDED
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Plus</h3>
-                <p className="text-gray-600 text-sm mb-4 h-12">
-                  Improve the flow and editing of your paper and get unlimited editing support.
+                <h3 className="text-2xl font-bold text-[#05203C] mb-2">Premium Plus</h3>
+                <p className="text-red-600 font-semibold mb-4 text-sm">Enhance Writing & Get Ongoing Support</p>
+                <p className="text-gray-600 text-sm mb-6 h-28 text-left">
+                  Looking for more than just basic editing? Our Premium Plus package not only improves the flow and coherence of your manuscript but also provides unlimited editing support. Benefit from continuous revisions and guidance.
                 </p>
-                <div className="flex items-center justify-center gap-1 text-green-600 text-xs font-semibold mb-2 h-6">
-                  <Check className="w-4 h-4 bg-green-100 rounded-full text-green-600 p-0.5" /> Valid for 12 months
-                </div>
+                <ul className="text-left text-sm text-gray-700 mb-6 space-y-2 font-medium">
+                  <li><span className="text-[#05203C] font-bold">Support Duration:</span> Valid for 12 months</li>
+                  <li><span className="text-[#05203C] font-bold">Base Price:</span> Starting at $204 for 500 words</li>
+                </ul>
 
                 <div className="mt-auto">
                   <div className="flex flex-col items-center mb-6">
-                    <label className="text-xs font-semibold text-gray-500 mb-1">Price calculator</label>
+                    <label className="text-xs font-bold text-gray-500 mb-1 uppercase tracking-wide">Price calculator</label>
                     <select 
-                      className="border border-gray-300 rounded-sm px-3 py-2 text-sm w-48 text-gray-700 bg-white cursor-pointer focus:outline-none focus:ring-1 focus:ring-[#007398]"
+                      className="border-2 border-gray-200 rounded-md px-3 py-2 text-sm w-full text-[#05203C] font-semibold bg-gray-50 cursor-pointer focus:outline-none focus:border-[#05203C]"
                       value={plusWordCount.label}
                       onChange={(e) => setPlusWordCount(WORD_COUNTS.find(w => w.label === e.target.value) || WORD_COUNTS[0])}
                     >
@@ -205,13 +216,13 @@ export default function ServicesClient() {
                   </div>
                   
                   <div className="flex justify-center items-end gap-2 mb-6">
-                    <span className="text-xs text-gray-500 mb-1">From</span>
-                    <span className="text-4xl font-bold text-gray-900">${plusPrice}</span>
+                    <span className="text-sm text-gray-500 mb-1 font-medium">From</span>
+                    <span className="text-4xl font-extrabold text-[#05203C]">${plusPrice}</span>
                   </div>
 
                   <Link href="/services/premium-plus">
-                    <button className="bg-[#007398] hover:bg-[#005a77] text-white font-medium py-3 px-6 rounded-sm w-4/5 mx-auto transition-colors text-sm flex items-center justify-center gap-2">
-                      Order Plus service <span className="text-xs">▶</span>
+                    <button className="bg-[#05203C] hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-md w-full transition-colors text-sm flex items-center justify-center gap-2 shadow-lg">
+                      Order Premium Plus <span className="text-xs">▶</span>
                     </button>
                   </Link>
                 </div>
@@ -220,74 +231,101 @@ export default function ServicesClient() {
 
             {/* Comparison Table */}
             <div className="mt-20 overflow-x-auto pb-4 max-w-[1100px] mx-auto">
-              <table className="w-full text-sm text-left table-fixed min-w-[800px]">
-                <thead>
+              <h2 className="text-3xl font-bold text-center text-[#05203C] mb-4">Compare Packages/options</h2>
+              <p className="text-center text-gray-600 mb-12">Go through the table below to compare packages and choose the best one.</p>
+
+              <table className="w-full text-sm text-left table-fixed min-w-[800px] border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                <thead className="bg-[#05203C] text-white">
                   <tr>
-                    <th className="pb-8 font-normal text-gray-500 w-[40%]"></th>
-                    <th className="pb-8 text-center font-normal w-[20%] align-bottom">
-                      <div className="font-bold text-gray-900 mb-2 text-lg">Standard</div>
-                      <div className="text-[11px] text-gray-500 uppercase tracking-wider mb-2 bg-gray-50 inline-block px-3 py-1 rounded-full">{stdWordCount.label} words from</div>
-                      <div className="text-2xl font-bold text-gray-900">${stdPrice}</div>
-                    </th>
-                    <th className="pb-8 text-center font-normal w-[20%] align-bottom">
-                      <div className="font-bold text-gray-900 mb-2 text-lg">Express</div>
-                      <div className="text-[11px] text-gray-500 uppercase tracking-wider mb-2 bg-gray-50 inline-block px-3 py-1 rounded-full">{expWordCount.label} words from</div>
-                      <div className="text-2xl font-bold text-gray-900">${expPrice}</div>
-                    </th>
-                    <th className="pb-8 text-center font-normal w-[20%] relative align-bottom">
-                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-green-100 text-green-800 text-[9px] font-bold px-1.5 py-0.5 rounded-sm uppercase tracking-wider border border-green-200 whitespace-nowrap">
-                        RECOMMENDED
-                      </div>
-                      <div className="font-bold text-gray-900 mb-2 text-lg mt-4">Plus</div>
-                      <div className="text-[11px] text-gray-500 uppercase tracking-wider mb-2 bg-gray-50 inline-block px-3 py-1 rounded-full">{plusWordCount.label} words from</div>
-                      <div className="text-2xl font-bold text-gray-900">${plusPrice}</div>
-                    </th>
+                    <th className="p-6 font-bold w-[40%] text-lg">Feature/Benefit</th>
+                    <th className="p-6 text-center font-bold w-[20%] text-lg border-l border-white/20">Standard Editing</th>
+                    <th className="p-6 text-center font-bold w-[20%] text-lg border-l border-white/20">Express Editing</th>
+                    <th className="p-6 text-center font-bold w-[20%] text-lg border-l border-white/20">Premium Plus Editing</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-100 border-t border-b border-gray-200">
+                <tbody className="divide-y divide-gray-200">
                   {COMPARISON.map((row, i) => (
-                    <tr key={i} className="hover:bg-gray-50 group">
-                      <td className="py-4 pr-6 text-gray-700 leading-snug font-medium text-[13px]">{row.feature}</td>
-                      <td className="py-4 text-center">
-                        {row.standard ? <Check className="w-5 h-5 text-green-500 mx-auto" strokeWidth={3} /> : <X className="w-5 h-5 text-red-500 mx-auto" strokeWidth={3} />}
+                    <tr key={i} className="hover:bg-blue-50/50 transition-colors">
+                      <td className="p-4 font-semibold text-gray-800">{row.feature}</td>
+                      <td className="p-4 text-center border-l border-gray-200">
+                        {row.standard ? <Check className="w-6 h-6 text-green-600 mx-auto" strokeWidth={3} /> : <X className="w-6 h-6 text-red-600 mx-auto" strokeWidth={3} />}
                       </td>
-                      <td className="py-4 text-center">
-                        {row.express ? <Check className="w-5 h-5 text-green-500 mx-auto" strokeWidth={3} /> : <X className="w-5 h-5 text-red-500 mx-auto" strokeWidth={3} />}
+                      <td className="p-4 text-center border-l border-gray-200">
+                        {row.express ? <Check className="w-6 h-6 text-green-600 mx-auto" strokeWidth={3} /> : <X className="w-6 h-6 text-red-600 mx-auto" strokeWidth={3} />}
                       </td>
-                      <td className="py-4 text-center">
-                        {row.premium ? <Check className="w-5 h-5 text-green-500 mx-auto" strokeWidth={3} /> : <X className="w-5 h-5 text-red-500 mx-auto" strokeWidth={3} />}
+                      <td className="p-4 text-center border-l border-gray-200">
+                        {row.premium ? <Check className="w-6 h-6 text-green-600 mx-auto" strokeWidth={3} /> : <X className="w-6 h-6 text-red-600 mx-auto" strokeWidth={3} />}
                       </td>
                     </tr>
                   ))}
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <td className="pt-10"></td>
-                    <td className="pt-10 text-center">
-                       <Link href="/services/standard-editing">
-                        <button className="bg-[#007398] hover:bg-[#005a77] text-white font-medium py-2 px-4 rounded-sm text-xs w-[85%] mx-auto transition-colors flex items-center justify-center gap-1">
-                          Order Standard service <span className="text-[10px]">▶</span>
-                        </button>
-                       </Link>
-                    </td>
-                    <td className="pt-10 text-center">
-                      <Link href="/services/express-editing">
-                        <button className="bg-[#007398] hover:bg-[#005a77] text-white font-medium py-2 px-4 rounded-sm text-xs w-[85%] mx-auto transition-colors flex items-center justify-center gap-1">
-                          Order Express service <span className="text-[10px]">▶</span>
-                        </button>
-                      </Link>
-                    </td>
-                    <td className="pt-10 text-center">
-                      <Link href="/services/premium-plus">
-                        <button className="bg-[#007398] hover:bg-[#005a77] text-white font-medium py-2 px-4 rounded-sm text-xs w-[85%] mx-auto transition-colors flex items-center justify-center gap-1">
-                          Order Plus service <span className="text-[10px]">▶</span>
-                        </button>
-                      </Link>
-                    </td>
+                  {/* Additional explicit rows based on prompt */}
+                  <tr className="bg-gray-50 border-t-2 border-gray-300">
+                     <td className="p-4 font-bold text-[#05203C]">Starting Price for 500 Words</td>
+                     <td className="p-4 text-center border-l border-gray-200 font-bold text-lg">$95</td>
+                     <td className="p-4 text-center border-l border-gray-200 font-bold text-lg">$170</td>
+                     <td className="p-4 text-center border-l border-gray-200 font-bold text-lg text-red-600">$204</td>
                   </tr>
-                </tfoot>
+                  <tr className="bg-gray-50">
+                     <td className="p-4 font-bold text-[#05203C]">Turnaround Time</td>
+                     <td className="p-4 text-center border-l border-gray-200 font-medium text-sm">7-25 Business Days</td>
+                     <td className="p-4 text-center border-l border-gray-200 font-medium text-sm">4-25 Business Days</td>
+                     <td className="p-4 text-center border-l border-gray-200 font-medium text-sm">1-25 Business Days</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
+            
+            {/* New Sections Placeholders */}
+            <div className="grid grid-cols-1 gap-16 py-12 max-w-[1000px] mx-auto">
+              {/* Testimonials */}
+              <div className="bg-white p-8 border border-gray-100 shadow-md rounded-2xl relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-2 h-full bg-red-600"></div>
+                <h3 className="text-2xl font-bold text-[#05203C] mb-6 flex items-center gap-3"><Quote className="text-red-600 w-8 h-8" /> Testimonials</h3>
+                <p className="text-gray-600 italic">&quot;The editing provided by SuperbEditing completely transformed my manuscript. It was accepted into a high-impact journal just weeks later!&quot; - Dr. A. Smith</p>
+                <p className="text-sm text-gray-500 mt-4">(More testimonials and case studies coming soon)</p>
+              </div>
+
+              {/* Editing Samples */}
+              <div className="bg-[#05203C] p-8 text-white rounded-2xl shadow-xl">
+                <h3 className="text-2xl font-bold mb-6 flex items-center gap-3"><FileCheck className="text-red-500 w-8 h-8" /> Editing Samples</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="bg-white/10 p-6 rounded-xl border border-white/20">
+                     <h4 className="font-bold text-red-400 mb-2">Before</h4>
+                     <p className="text-sm text-gray-300 line-through">The study investigate about the impacts of temperature to the reactions rate.</p>
+                  </div>
+                  <div className="bg-white p-6 rounded-xl text-[#05203C]">
+                     <h4 className="font-bold text-green-600 mb-2">After</h4>
+                     <p className="text-sm font-medium">This study investigates the impact of temperature on the reaction rate.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* FAQ */}
+              <div className="bg-gray-50 p-8 border border-gray-200 rounded-2xl">
+                <h3 className="text-2xl font-bold text-[#05203C] mb-6 flex items-center gap-3"><HelpCircle className="text-red-600 w-8 h-8" /> FAQ</h3>
+                <div className="space-y-4">
+                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                    <p className="font-bold text-[#05203C] mb-1">What file formats do you accept?</p>
+                    <p className="text-sm text-gray-600">We accept Word (.doc, .docx) and LaTeX files.</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                    <p className="font-bold text-[#05203C] mb-1">How does the 12-Month Support work?</p>
+                    <p className="text-sm text-gray-600">For Premium Plus orders, you can send us your revised manuscript based on reviewer feedback, and we will edit it again at no extra cost for a year.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Order Form Placeholder */}
+              <div className="bg-white border-2 border-red-100 p-8 rounded-2xl text-center shadow-lg">
+                <FileText className="w-16 h-16 text-red-600 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-[#05203C] mb-4">Order Form</h3>
+                <p className="text-gray-600 mb-6">Our easy-to-use ordering system makes uploading your document and selecting your package a breeze.</p>
+                <button className="bg-red-600 text-white font-bold px-8 py-3 rounded-md hover:bg-red-700 transition-colors shadow-md">
+                   Start Your Order
+                </button>
+              </div>
+            </div>
+
           </div>
         )}
 
@@ -297,81 +335,6 @@ export default function ServicesClient() {
             Content for {activeTab} coming soon...
           </div>
         )}
-
-      </section>
-
-      {/* Guarantee Banner */}
-      <section className="bg-[#eef4f9] py-12 w-full mt-12">
-        <div className="max-w-[1000px] mx-auto px-6 flex flex-col md:flex-row items-center gap-8 md:gap-16 justify-center">
-          <div className="flex flex-col items-center text-center">
-             <div className="bg-blue-100 p-4 rounded-full mb-3">
-               <Award className="w-12 h-12 text-[#007398]" strokeWidth={1.5} />
-             </div>
-             <span className="font-bold text-[#007398] text-lg uppercase tracking-wide">Exclusive Quality<br/>Guarantee</span>
-          </div>
-          <div className="h-24 w-px bg-blue-200 hidden md:block"></div>
-          <p className="text-[15px] text-gray-700 max-w-[600px] leading-relaxed">
-            No matter what service you choose, SuperbEditing services are always guaranteed. If your manuscript is rejected due to English proofreading issues, we will re-edit your paper for free no questions asked.
-          </p>
-        </div>
-      </section>
-
-      {/* Why SuperbEditing Section */}
-      <section className="py-24 px-6 max-w-[1100px] mx-auto w-full">
-        <div className="flex flex-col md:flex-row gap-16 items-center">
-          <div className="w-full md:w-5/12">
-            <div className="relative w-full aspect-4/3 overflow-hidden shadow-xl rounded-sm">
-               <Image 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2069&auto=format&fit=crop" 
-                alt="Professional Editor" 
-                fill 
-                className="object-cover"
-              />
-            </div>
-          </div>
-          <div className="w-full md:w-7/12 space-y-6">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Why SuperbEditing Services?</h2>
-            <p className="text-gray-700 text-[15px] leading-relaxed">
-              Once you finish your manuscript, it is helpful to have it reviewed by an expert in your field whose first language is English. This will increase your chances to get published.
-            </p>
-            <p className="text-gray-700 text-[15px] leading-relaxed">
-              Language-edited papers are published more often, have a higher IF/SJR, and are published with a lower revision rate than regular papers.*
-            </p>
-            <p className="text-gray-700 text-[15px] leading-relaxed">
-              With our professional editing and publishing experience, SuperbEditing is a trusted authority in the industry. We understand the standards upheld by reputable journals. Our language editing service comes with a quality guarantee, ensuring that your manuscript will meet the highest standards.
-            </p>
-            <p className="text-xs text-gray-500 italic mt-4">* Source: Our internal data</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Need something different Section */}
-      <section className="bg-[#eef4f9] py-20 w-full">
-        <div className="max-w-[1000px] mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">Need something different?</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 text-left">
-            <div className="bg-transparent">
-               <h3 className="text-xl font-bold text-gray-900 mb-3">Language Editing PhD Thesis</h3>
-               <p className="text-[15px] text-gray-700 mb-6 leading-relaxed h-12">
-                 Our experts will improve the language of your PhD Thesis helping you reach the highest academic standard.
-               </p>
-               <Link href="#" className="text-[#007398] font-semibold text-sm hover:underline flex items-center gap-1.5 transition-colors">
-                 Find out more <span className="text-[10px]">▶</span>
-               </Link>
-            </div>
-            
-            <div className="bg-transparent">
-               <h3 className="text-xl font-bold text-gray-900 mb-3">Language Editing LaTeX</h3>
-               <p className="text-[15px] text-gray-700 mb-6 leading-relaxed h-12">
-                 Make sure your LaTeX manuscript is written in correct English before research.
-               </p>
-               <Link href="#" className="text-[#007398] font-semibold text-sm hover:underline flex items-center gap-1.5 transition-colors">
-                 Find out more <span className="text-[10px]">▶</span>
-               </Link>
-            </div>
-          </div>
-        </div>
       </section>
 
     </div>
